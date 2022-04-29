@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Exercicio {
 
     public static void main(String[] args) {
-        exe04();
+        exe06();
     }
 
     public static void exe01() {
@@ -65,13 +65,58 @@ public class Exercicio {
 
     public static void exe05() {
         Scanner in = new Scanner(System.in);
-        System.out.print("Informe a quantidade de eleitores: ");
+        System.out.print("Informe a quantidade total de eleitores: ");
         int eleitores = in.nextInt();
-        System.out.print("Informe a quantidade de votos brancos: ");
+        System.out.print("Informe a quantidade de votos BRANCOS: ");
         int brancos = in.nextInt();
-        System.out.println("Informe a quantidade de votos nulos: ");
-        
+        System.out.print("Informe a quantidade de votos NULOS: ");
+        int nulos = in.nextInt();
+        int totalvalidos = eleitores - brancos - nulos;
+        System.out.println("Total de votos válidos é: "+totalvalidos);
+        double porcvalidos = (100.0*totalvalidos) / eleitores;
+        double porcbrancos = (100.0*brancos) / eleitores;
+        double porcnulos = (100.0*nulos) / eleitores;
+        System.out.println("A porcentagem de votos validos é: "+porcvalidos+"%");
+        System.out.println("A porcentagem de votos brancos é: "+porcbrancos+"%");
+        System.out.println("A porcentagem de votos nulos é: "+porcnulos+"%");
+    }
 
+    public static void exe055() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Informe a quantidade total de eleitores: ");
+        int eleitores = in.nextInt();
+        System.out.print("Informe a quantidade de votos BRANCOS: ");
+        int brancos = in.nextInt();
+        System.out.print("Informe a quantidade de votos NULOS: ");
+        int nulos = in.nextInt();
+        int totalvalidos = eleitores - brancos - nulos;
+        System.out.println("Total de votos válidos é: "+totalvalidos);
+        double porcvalidos = (100.0*totalvalidos) / eleitores;
+        double porcbrancos = (100.0*brancos) / eleitores;
+        double porcnulos = (100.0*nulos) / eleitores;
+        System.out.printf("%% de votos validos é: %.2f%%\n", porcvalidos);
+        System.out.printf("%% de votos brancos é: %.2f%%\n", porcbrancos);
+        System.out.printf("%% de votos nulos é: %.2f%%\n", porcnulos);
+
+    }
+
+    public static void exe06() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Quanto o funcionário ganha por mês atualmente? R$");
+        double salario = in.nextDouble();
+        System.out.print("Qual seria o percentual de reajuste? ");
+        double reajuste = in.nextDouble();
+        double desconto = (salario*reajuste)/100;
+        double novosalario = salario + desconto;
+        System.out.printf("Novo salário do funcionário é: %.2f\n",novosalario);
+
+    }
+
+    public static void exe07() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Qual é o custo de fábrica do carro? ");
+        double fabrica = in.nextDouble();
+        
 
 
 
