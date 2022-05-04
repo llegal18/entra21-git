@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Exercicio {
 
     public static void main(String[] args) {
-        exe01();
+        exe10();
     }
 
     public static void exe01() {
@@ -142,17 +142,21 @@ public class Exercicio {
 
     public static void exe09() {
         Scanner in = new Scanner(System.in);
+        System.out.print("Informe a temperatura (F): ");
+        double tempF = in.nextInt();
+        double tempC = ((tempF-32)*5)/9;
+        System.out.printf("A temperatura em Celsius é: %.2f", tempC);
     }
 
     public static void exe10() {
         Scanner in = new Scanner(System.in);
-        System.out.print("Nota 1: ");
+        System.out.print("A primeira nota é: ");
         double n1 = in.nextDouble();
-        System.out.print("Nota 2: ");
+        System.out.print("A segunda nota é: ");
         double n2 = in.nextDouble();
-        System.out.print("Nota 3: ");
+        System.out.print("A terceira nota é: ");
         double n3 = in.nextDouble();
-        double mediaFinal = (n1*2 + n2*3 + n3*5)/10;
+        double mediaFinal = ((n1*2) + (n2*3) + (n3*5))/10;
         System.out.printf("Sua média final é: %.2f\n", mediaFinal);
     }
 
