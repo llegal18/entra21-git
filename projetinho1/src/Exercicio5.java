@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Exercicio5 {
 
     // 1. Pedir ao usuário quantas palavras ele deseja informar;
@@ -9,7 +10,7 @@ public class Exercicio5 {
         Scanner in = new Scanner(System.in);
         System.out.print("Informe a quantidade de palavras que você deseja: ");
         int qtdePal = in.nextInt();
-        String [] palavras = new String[qtdePal];
+        String[] palavras = new String[qtdePal];
         for (int bat = 0; bat < qtdePal; bat++) {
             System.out.print("Informe as palavra: ");
             palavras[bat] = in.next();
@@ -19,7 +20,7 @@ public class Exercicio5 {
             if (bat == 0) {
                 palavraFinal += palavras[bat];
             } else {
-                palavraFinal += ", "+ palavras[bat];
+                palavraFinal += ", " + palavras[bat];
             }
         }
         System.out.println(palavraFinal);

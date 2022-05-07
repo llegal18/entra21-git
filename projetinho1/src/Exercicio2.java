@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Exercicio2 {
 
     //if e else
@@ -123,7 +124,7 @@ public class Exercicio2 {
 
         double salario;
         if (horasTrab > 160) {
-            salario = 160 * valorH + ((horasTrab-160) * (valorH - valorH/2));
+            salario = 160 * valorH + ((horasTrab - 160) * (valorH - valorH / 2));
         } else {
             salario = horasTrab * valorH;
         }
@@ -157,11 +158,11 @@ public class Exercicio2 {
         double salFinal;
 
         if (valorVendas > 1500) {
-            salFinal = salFixo + (1500*0.03);
+            salFinal = salFixo + (1500 * 0.03);
             double exedente = valorVendas - 1500;
-            salFinal += exedente*0.05;
+            salFinal += exedente * 0.05;
         } else {
-            salFinal = salFixo + (valorVendas*0.03);
+            salFinal = salFixo + (valorVendas * 0.03);
         }
         System.out.printf("Salário final: R$%.2f", salFinal);
     }
@@ -195,7 +196,7 @@ public class Exercicio2 {
         System.out.print("Quantidade máxima de estoque: ");
         double qtdeMaxima = in.nextDouble();
 
-        double mediaEstoque = (qtdeMaxima + qtdeMinima)/2;
+        double mediaEstoque = (qtdeMaxima + qtdeMinima) / 2;
         if (qtdeAtual >= mediaEstoque) {
             System.out.println("Não efetuar compra!");
         } else {

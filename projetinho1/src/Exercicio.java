@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Exercicio {
 
     public static void main(String[] args) {
@@ -33,10 +34,10 @@ public class Exercicio {
         double base = in.nextDouble();
         System.out.print("Informe a altura do retângulo: ");
         double altura = in.nextDouble();
-        double area = base*altura;
-        double perimetro = base*2 + altura*2;
-        System.out.println("Área: "+area);
-        System.out.println("Perímetro: "+perimetro);
+        double area = base * altura;
+        double perimetro = base * 2 + altura * 2;
+        System.out.println("Área: " + area);
+        System.out.println("Perímetro: " + perimetro);
     }
 
     public static void exe033() {
@@ -45,8 +46,8 @@ public class Exercicio {
         double base = in.nextDouble();
         System.out.print("Informe a altura do retângulo: ");
         double altura = in.nextDouble();
-        double area = base*altura;
-        double perimetro = base*2 + altura*2;
+        double area = base * altura;
+        double perimetro = base * 2 + altura * 2;
         System.out.printf("Área: %.2f\n", area);
         System.out.printf("Perímetro: %.2f", perimetro);
     }
@@ -59,8 +60,8 @@ public class Exercicio {
         int meses = in.nextInt();
         System.out.print("Informe quantos dias: ");
         int dias = in.nextInt();
-        int total = anos*365 + meses*30 + dias;
-        System.out.printf("Você viveu %d dias" ,total);
+        int total = anos * 365 + meses * 30 + dias;
+        System.out.printf("Você viveu %d dias", total);
     }
 
     public static void exe05() {
@@ -72,13 +73,13 @@ public class Exercicio {
         System.out.print("Informe a quantidade de votos NULOS: ");
         int nulos = in.nextInt();
         int totalvalidos = eleitores - brancos - nulos;
-        System.out.println("Total de votos válidos é: "+totalvalidos);
-        double porcvalidos = (100.0*totalvalidos) / eleitores;
-        double porcbrancos = (100.0*brancos) / eleitores;
-        double porcnulos = (100.0*nulos) / eleitores;
-        System.out.println("A porcentagem de votos validos é: "+porcvalidos+"%");
-        System.out.println("A porcentagem de votos brancos é: "+porcbrancos+"%");
-        System.out.println("A porcentagem de votos nulos é: "+porcnulos+"%");
+        System.out.println("Total de votos válidos é: " + totalvalidos);
+        double porcvalidos = (100.0 * totalvalidos) / eleitores;
+        double porcbrancos = (100.0 * brancos) / eleitores;
+        double porcnulos = (100.0 * nulos) / eleitores;
+        System.out.println("A porcentagem de votos validos é: " + porcvalidos + "%");
+        System.out.println("A porcentagem de votos brancos é: " + porcbrancos + "%");
+        System.out.println("A porcentagem de votos nulos é: " + porcnulos + "%");
     }
 
     public static void exe055() {
@@ -90,10 +91,10 @@ public class Exercicio {
         System.out.print("Informe a quantidade de votos NULOS: ");
         int nulos = in.nextInt();
         int totalvalidos = eleitores - brancos - nulos;
-        System.out.println("Total de votos válidos é: "+totalvalidos);
-        double porcvalidos = (100.0*totalvalidos) / eleitores;
-        double porcbrancos = (100.0*brancos) / eleitores;
-        double porcnulos = (100.0*nulos) / eleitores;
+        System.out.println("Total de votos válidos é: " + totalvalidos);
+        double porcvalidos = (100.0 * totalvalidos) / eleitores;
+        double porcbrancos = (100.0 * brancos) / eleitores;
+        double porcnulos = (100.0 * nulos) / eleitores;
         System.out.printf("%% de votos validos é: %.2f%%\n", porcvalidos);
         System.out.printf("%% de votos brancos é: %.2f%%\n", porcbrancos);
         System.out.printf("%% de votos nulos é: %.2f%%\n", porcnulos);
@@ -106,9 +107,9 @@ public class Exercicio {
         double salario = in.nextDouble();
         System.out.print("Qual seria o percentual de reajuste? ");
         double reajuste = in.nextDouble();
-        double desconto = (salario*reajuste)/100;
+        double desconto = (salario * reajuste) / 100;
         double novosalario = salario + desconto;
-        System.out.printf("Novo salário do funcionário é: %.2f\n",novosalario);
+        System.out.printf("Novo salário do funcionário é: %.2f\n", novosalario);
 
     }
 
@@ -118,8 +119,8 @@ public class Exercicio {
         double fabrica = in.nextDouble();
         double distribuidor = 28;
         double impostos = 45;
-        double valorDistribuidor = fabrica*(distribuidor/100);
-        double valorImpostos = fabrica*(impostos/100);
+        double valorDistribuidor = fabrica * (distribuidor / 100);
+        double valorImpostos = fabrica * (impostos / 100);
         double custoConsumidor = fabrica + valorDistribuidor + valorImpostos;
         System.out.printf("O custo final é: R$ %.2f\n", custoConsumidor);
     }
@@ -144,7 +145,7 @@ public class Exercicio {
         Scanner in = new Scanner(System.in);
         System.out.print("Informe a temperatura (F): ");
         double tempF = in.nextInt();
-        double tempC = ((tempF-32)*5)/9;
+        double tempC = ((tempF - 32) * 5) / 9;
         System.out.printf("A temperatura em Celsius é: %.2f", tempC);
     }
 
@@ -156,9 +157,9 @@ public class Exercicio {
         double n2 = in.nextDouble();
         System.out.print("A terceira nota é: ");
         double n3 = in.nextDouble();
-        double mediaFinal = ((n1*2) + (n2*3) + (n3*5))/10;
+        double mediaFinal = ((n1 * 2) + (n2 * 3) + (n3 * 5)) / 10;
         System.out.printf("Sua média final é: %.2f\n", mediaFinal);
     }
 
 
-    }
+}

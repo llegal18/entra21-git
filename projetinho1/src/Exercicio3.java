@@ -6,7 +6,7 @@ public class Exercicio3 {
         String[] palavras = {"abc", "def", "ghi"};
         char letraProibida = 'a';
         boolean achou = false;
-        for (String palavra: palavras){
+        for (String palavra : palavras) {
             for (int i = 0; i < palavra.length(); i++) {
                 achou = palavra.charAt(i) == letraProibida;
                 if (achou) {
