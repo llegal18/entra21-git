@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Exercicio6 {
 
     public static void main(String[] args) {
-        exe06();
+        exe066();
     }
 
     public static void exe01() {
@@ -65,13 +65,34 @@ public class Exercicio6 {
 
     public static void exe05() {
         Scanner in = new Scanner(System.in);
+        System.out.print("Informe um número: ");
+
     }
 
     public static void exe06() {
         Scanner in = new Scanner(System.in);
+        System.out.print("Informe um número: ");
         int number = in.nextInt();
 
+        int soma = 0;
+        for (int i = 0; i <= number; i++) {
+            soma += i;
+        }
+        System.out.println(soma);
+        soma = 0;
+    }
 
+    public static void exe066() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Informe um número: ");
+        int number = in.nextInt();
+
+        int soma = 0;
+        while (number > 0) {
+            soma += number;
+            number--;
+        }
+        System.out.println(soma);
     }
 }
 
