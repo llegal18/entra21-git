@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Exercicio6 {
 
     public static void main(String[] args) {
-        exe03();
+        exe06();
     }
 
     public static void exe01() {
@@ -42,6 +42,36 @@ public class Exercicio6 {
             soma += in.nextInt();
         }
         System.out.println("A soma é: " + soma);
+    }
+
+    public static void exe04() {
+        Scanner in = new Scanner(System.in);
+        int tentativas = 3;
+        while (tentativas > 0) {
+            System.out.print("Informe seu PIN: ");
+            int pin = in.nextInt();
+            if (pin == 91352) {
+                System.out.print("ACESSO LIBERADO!");
+                break;
+            }
+            tentativas--;
+            if (tentativas == 0) {
+                System.out.println("ACESSO BLOQUEADO!");
+            } else {
+                System.out.println("PIN incorreto,tente novamente!");
+            }
+        }
+    }
+
+    public static void exe05() {
+        Scanner in = new Scanner(System.in);
+    }
+
+    public static void exe06() {
+        Scanner in = new Scanner(System.in);
+        int number = in.nextInt();
+
+
     }
 }
 
