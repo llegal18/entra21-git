@@ -96,5 +96,3 @@ public class Exercicio6 {
     }
 }
 
-// w3schools.com
-
