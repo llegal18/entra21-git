@@ -11,16 +11,18 @@ public class Exercicio5 {
         System.out.print("Informe a quantidade de palavras que você deseja: ");
         int qtdePal = in.nextInt();
         String[] palavras = new String[qtdePal];
-        for (int bat = 0; bat < qtdePal; bat++) {
+
+        for (int i = 0; i < qtdePal; i++) {
             System.out.print("Informe as palavra: ");
-            palavras[bat] = in.next();
+            palavras[i] = in.next();
         }
+
         String palavraFinal = "";
-        for (int bat = 0; bat < palavras.length; bat++) {
-            if (bat == 0) {
-                palavraFinal += palavras[bat];
+        for (int i = 0; i < palavras.length; i++) {
+            if (i == 0) {
+                palavraFinal += palavras[i];
             } else {
-                palavraFinal += ", " + palavras[bat];
+                palavraFinal += ", " + palavras[i];
             }
         }
         System.out.println(palavraFinal);

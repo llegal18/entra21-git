@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Exercicio7 {
 
     public static void main(String[] args) {
-        exe02();
+        exe04();
     }
 
     public static void exe01() {
@@ -38,6 +38,32 @@ public class Exercicio7 {
         } else {
             System.out.printf("Não é um palíndromo!\n", palindromo);
         }
-        // reverse = new StringBuilder(palavra).reverse().toString(); 
+        // reverse = new StringBuilder(palavra).reverse().toString();
+    }
+
+    public static void exe03() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Digite um número: ");
+        double number = in.nextDouble();
+        System.out.println((number - 1) + ", " + (number + 1));
+    }
+
+    public static void exe04() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Informe o primeiro número: ");
+        int num1 = in.nextInt();
+        System.out.print("Informe o segundo número: ");
+        int num2 = in.nextInt();
+
+        int soma = num1 + num2;
+        int subt = num1 - num2;
+        int multi = num1 * num2;
+        int div = num1 / num2;
+
+        System.out.printf("O resultado da soma é: %d\n", soma);
+        System.out.printf("O resultado da subtração é: %d\n", subt);
+        System.out.printf("O resultado da multiplicação é: %d\n", multi);
+        System.out.printf("O resultado da divisão é: %d\n", div);
     }
 }
+

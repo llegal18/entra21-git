@@ -10,8 +10,8 @@ public class Exercicio4 {
             for (int potat = 0; potat <= 10; potat++) {
                 System.out.println(potat * valor);
             }
-                System.out.println("Qual tabuada deseja saber? ");
-                valor = batata.nextInt();
-                }
-            }
+            System.out.println("Qual tabuada deseja saber? ");
+            valor = batata.nextInt();
         }
+    }
+}
