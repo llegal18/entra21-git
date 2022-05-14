@@ -65,5 +65,11 @@ public class Exercicio7 {
         System.out.printf("O resultado da multiplicação é: %d\n", multi);
         System.out.printf("O resultado da divisão é: %d\n", div);
     }
+
+    public static void exe05() {
+        Scanner in = new Scanner(System.in);
+
+
+    }
 }
 
