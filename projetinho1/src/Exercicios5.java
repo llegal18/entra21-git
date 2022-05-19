@@ -5,7 +5,6 @@ public class Exercicios5 {
     public static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
-        exe10();
     }
 
     public static void exe01() {

@@ -5,7 +5,6 @@ public class Exercicio2 {
     //if e else
 
     public static void main(String[] args) {
-        exe08();
     }
 
     public static void exe01() {
