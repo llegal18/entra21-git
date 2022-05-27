@@ -17,6 +17,7 @@ public abstract class Lanche {
     public void montarComanda() {
         System.out.println("==== " + this.tipo + " ====");
         System.out.printf("Valor: R$%.2f\n", this.valor);
+        System.out.println("--------------");
         System.out.println("-INGREDIENTES-");
         for (String ingrediente : this.ingredientes) {
             if (ingrediente != null) {

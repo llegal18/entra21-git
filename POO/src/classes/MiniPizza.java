@@ -4,15 +4,17 @@ public class MiniPizza extends Lanche {
 
     public boolean bordaRecheada;
 
+    public String sabor;
+
     public String saborBorda;
 
     public MiniPizza() {
         this.adicionarIngrediente("Massa");
         this.adicionarIngrediente("Calabresa");
-        this.adicionarIngrediente("Queijo");
+        this.adicionarIngrediente("Queijo"0);
         this.adicionarIngrediente("Molho de tomate");
         this.adicionarIngrediente("Orégano");
-        this.tipo = "MiniPizza";
+        this.tipo = "MiniPizza - Calabresa";
     }
 
     @Override
