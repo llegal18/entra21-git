@@ -13,7 +13,8 @@ public class Pizza extends MiniPizza {
         super.montarComanda();
         System.out.println("--TAMANHO: " + this.getTamanho());
     }
-    // GETTERS & SETTERS
+
+    // GETTERS & SETTERS:
     public void setTamanho(String tamanho) {
         this.tamanho = tamanho;
     }

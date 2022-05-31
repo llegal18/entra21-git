@@ -49,7 +49,7 @@ public class MiniPizza extends Lanche {
             System.out.println("--COM BORDA RECHEADA: " + this.getSaborBorda().toUpperCase() + "--");
         }
     }
-    // GETTERS & SETTERS
+    // GETTERS & SETTERS:
     public void setBordaRecheada(boolean bordaRecheada) {
         this.bordaRecheada = bordaRecheada;
     }

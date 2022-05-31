@@ -18,7 +18,7 @@ public class XBurguer extends Sanduiche {
             System.out.println("--LANCHE ABERTO--");
         }
     }
-    // GUETTERS & SETTERS
+    // GUETTERS & SETTERS:
     public void setAberto(boolean aberto) {
         this.aberto = aberto;
     }

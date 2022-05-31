@@ -31,7 +31,6 @@ public abstract class Sanduiche extends Lanche {
         }
         System.out.println("--------------");
     }
-    // GETTERS & SETTERS
 }
 
 

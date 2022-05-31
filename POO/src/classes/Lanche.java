@@ -30,7 +30,7 @@ public abstract class Lanche {
         }
         System.out.println("--------------");
     }
-    // GETTERS & SETTERS
+    // GETTERS & SETTERS:
 
     public void setValor(double valor) {
         this.valor = valor;
