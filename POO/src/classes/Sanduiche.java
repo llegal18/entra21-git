@@ -2,7 +2,7 @@ package classes;
 
 public abstract class Sanduiche extends Lanche {
 
-    public String[] adicionais = new String[10];
+    private String[] adicionais = new String[10];
 
     public void adicionarAdicionais(String adicional) {
         for (int i = 0; i < 10; i++) {
@@ -12,9 +12,11 @@ public abstract class Sanduiche extends Lanche {
             }
         }
     }
+
     public Sanduiche() {
         this.adicionarIngrediente("Pão");
     }
+
     @Override
     public void montarComanda() {
         super.montarComanda();
@@ -29,7 +31,9 @@ public abstract class Sanduiche extends Lanche {
         }
         System.out.println("--------------");
     }
+    // GETTERS & SETTERS
 }
+
 
 
 

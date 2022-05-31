@@ -11,7 +11,8 @@ public class Main {
         System.out.println("(2) - X-Burguer");
         System.out.println("(3) - Misto Quente");
         System.out.println("(4) - Hot Dog");
-        System.out.println("(5) - MiniPizza - Calabresa");
+        System.out.println("(5) - MiniPizza");
+        System.out.println("(6) - Pizza");
 
         Lanche lanche = null;
 
@@ -43,22 +44,65 @@ public class Main {
 
                 break;
 
+            case 6:
+                lanche = new Pizza();
+
+                break;
+
             default:
                 System.err.println("Escolha uma opção válida!");
         }
         if (lanche instanceof XBurguer) {
             System.out.println("Lanche aberto? (S/N)");
             String aberto = in.nextLine();
-            ((XBurguer) lanche).aberto = aberto.equalsIgnoreCase("S");
+            ((XBurguer) lanche).setAberto(aberto.equalsIgnoreCase("S"));
         }
-        if (escolha == 5) {
-            System.out.println("Deseja MiniPizza com borda recheada? (S/N)");
-            String bordaRecheada = in.nextLine();
+        if (escolha == 5 || escolha == 6) {
+            System.out.println("Escolha o sabor da pizza: ");
+            System.out.println("(1) - 4 Queijos");
+            System.out.println("(2) - Calabresa");
+            System.out.println("(3) - Frango com catupiry");
+            System.out.println("(4) - Marguerita");
+            System.out.println("(5) - Portuguesa");
+            int sabor = in.nextInt();
+            in.nextLine();
             MiniPizza miniPizza = ((MiniPizza) lanche);
-            miniPizza.bordaRecheada = bordaRecheada.equalsIgnoreCase("S");
-            if (miniPizza.bordaRecheada) {
+
+            switch (sabor) {
+                case 1:
+                    miniPizza.adicionarSaborEIngredientes("4 queijos");
+                    break;
+                case 2:
+                    miniPizza.adicionarSaborEIngredientes("Calabresa");
+                    break;
+                case 3:
+                    miniPizza.adicionarSaborEIngredientes("Frango com Catupiry");
+                    break;
+                case 4:
+                    miniPizza.adicionarSaborEIngredientes("Marguerita");
+                    break;
+                case 5:
+                    miniPizza.adicionarSaborEIngredientes("Portuguesa");
+                    break;
+                default:
+                    System.err.println("Escolha um sabor válido!");
+            }
+
+            if (lanche instanceof Pizza) {
+                System.out.println("Informe o tamanho da pizza: ");
+                System.out.println("XS - Broto");
+                System.out.println("SM - Pequena");
+                System.out.println("MD - Média");
+                System.out.println("LG - Grande");
+                System.out.println("XL - Família");
+                ((Pizza) lanche).setTamanho(in.nextLine().toUpperCase());
+            }
+            System.out.println("Deseja MiniPizza com borda recheada? (S/N)");
+            String aberto = in.nextLine();
+            miniPizza.setBordaRecheada(aberto.equalsIgnoreCase("S"));
+            if (miniPizza.isBordaRecheada()) {
                 System.out.print("Qual sabor da borda recheada? ");
-                miniPizza.saborBorda = in.nextLine();
+                miniPizza.setSaborBorda(in.nextLine());
             }
         }
         if (lanche instanceof Sanduiche) {
@@ -79,8 +123,8 @@ public class Main {
                 }
             }
         }
-        System.out.print("Informe o valor de " + lanche.tipo + ": R$");
-        lanche.valor = in.nextDouble();
+        System.out.print("Informe o valor de " + lanche.getTipo() + ": R$");
+        lanche.setValor(in.nextDouble());
         lanche.montarComanda();
     }
 }

@@ -1,10 +1,10 @@
 package classes;
 
 public abstract class Lanche {
-    public String[] ingredientes = new String[10];
-    public double valor;
+    private String[] ingredientes = new String[10];
+    private double valor;
 
-    public String tipo;
+    private String tipo;
 
     public void adicionarIngrediente(String ingrediente) {
         for (int i = 0; i < 10; i++) {
@@ -15,7 +15,11 @@ public abstract class Lanche {
         }
     }
     public void montarComanda() {
-        System.out.println("==== " + this.tipo + " ====");
+        if (this instanceof MiniPizza) {
+            System.out.println("==== " + this.tipo + " - " + ((MiniPizza) this).getSabor() + " ====");
+        } else {
+            System.out.println("==== " + this.tipo + " ====");
+        }
         System.out.printf("Valor: R$%.2f\n", this.valor);
         System.out.println("--------------");
         System.out.println("-INGREDIENTES-");
@@ -25,6 +29,23 @@ public abstract class Lanche {
             }
         }
         System.out.println("--------------");
+    }
+    // GETTERS & SETTERS
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public double getValor() {
+        return this.valor;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getTipo() {
+        return this.tipo;
     }
 }
 
