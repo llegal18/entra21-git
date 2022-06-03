@@ -129,7 +129,6 @@ public class Main {
         }
         System.out.print("Informe o valor de " + lanche.getTipo() + ": R$");
         lanche.setValor(in.nextDouble());
-        lanche.montarComanda();
     }
 }
 

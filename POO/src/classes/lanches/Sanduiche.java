@@ -17,21 +17,11 @@ public abstract class Sanduiche extends Lanche {
         this.adicionarIngrediente("Pão");
     }
 
-    @Override
-    public void montarComanda() {
-        super.montarComanda();
-        if (this.adicionais[0] != null) {
-            System.out.println("--ADICIONAIS--");
-            for (int i = 0; i < 10; i++) {
-                if (adicionais[i] == null) {
-                    break;
-                }
-                System.out.println(adicionais[i]);
-            }
-        }
-        System.out.println("--------------");
+    public String[] getAdicionais() {
+        return adicionais;
     }
 }
+
 
 
 
