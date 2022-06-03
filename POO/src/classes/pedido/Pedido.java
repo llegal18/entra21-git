@@ -42,14 +42,16 @@ public class Pedido {
                         System.out.println("--ADICIONAIS--");
                         for (String adicional : s.getAdicionais()) {
                             if (adicional != null) {
-                                System.out.println(adicional);
+                                System.out.println(adicional.toUpperCase());
                             }
                         }
                     }
                 }
             }
         }
+        System.out.println("--------------");
         System.out.printf("Valor total do pedido: R$%.2f\n", this.calcularValorTotal());
+        System.out.println("---------------------------------");
     }
 
     public double calcularValorTotal() {
@@ -79,3 +81,7 @@ public class Pedido {
         return this.lanches;
     }
 }
+// Composição --> é parte
+// Agregação --> tem um
+// Herança --> é um
+// Associação --> usa alguma coisa
