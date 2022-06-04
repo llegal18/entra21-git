@@ -1,6 +1,5 @@
 import classes.cliente.Cliente;
 import classes.lanches.*;
-
 import java.util.Scanner;
 
 public class Main {
@@ -149,4 +148,7 @@ public class Main {
         return lanche;
     }
 }
-
+// Composição --> é parte
+// Agregação --> tem um
+// Herança --> é um
+// Associação --> usa alguma coisa

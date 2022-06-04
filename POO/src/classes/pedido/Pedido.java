@@ -1,7 +1,5 @@
 package classes.pedido;
-
 import classes.lanches.*;
-
 import java.nio.channels.Pipe;
 
 public class Pedido {
@@ -81,7 +79,3 @@ public class Pedido {
         return this.lanches;
     }
 }
-// Composição --> é parte
-// Agregação --> tem um
-// Herança --> é um
-// Associação --> usa alguma coisa

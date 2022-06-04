@@ -1,7 +1,5 @@
 package classes.cliente;
-
 import classes.pedido.Pedido;
-
 import java.security.PublicKey;
 
 public class Cliente {

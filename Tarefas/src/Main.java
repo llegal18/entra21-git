@@ -1,5 +1,4 @@
-import classes.Tarefa;
-
+import classes.tarefa.Tarefa;
 import java.util.Scanner;
 
 public class Main {

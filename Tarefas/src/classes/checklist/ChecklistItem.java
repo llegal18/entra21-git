@@ -1,8 +1,6 @@
-package classes;
+package classes.checklist;
 
-import java.util.UUID;
-
-public class Tarefa {
+public class ChecklistItem {
 
     private String uuid;
     private String nome;
@@ -10,52 +8,49 @@ public class Tarefa {
     private boolean completa;
     private int ordem;
 
-    public Tarefa() {
-        this.setUUID(UUID.randomUUID().toString());
-    }
-
     public void completar() {
         setCompleta(true);
+
     }
     // GETTERS & SETTERS:
 
-    public void setUUID(String uuid) {
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
         this.uuid = uuid;
     }
 
-    public String getUUID() {
-        return this.uuid;
+    public String getNome() {
+        return nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public String getNome() {
-        return this.nome;
+    public String getDescricao() {
+        return descricao;
     }
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
-    public String getDescricao() {
-        return this.descricao;
+    public boolean isCompleta() {
+        return completa;
     }
 
     public void setCompleta(boolean completa) {
         this.completa = completa;
     }
 
-    public boolean isCompleta() {
-        return this.completa;
+    public int getOrdem() {
+        return ordem;
     }
 
     public void setOrdem(int ordem) {
         this.ordem = ordem;
-    }
-
-    public int getOrdem() {
-        return this.ordem;
     }
 }
