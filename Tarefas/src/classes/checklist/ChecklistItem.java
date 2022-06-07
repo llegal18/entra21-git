@@ -6,7 +6,6 @@ public class ChecklistItem {
     private String nome;
     private String descricao;
     private boolean completa;
-    private int ordem;
 
     public void completar() {
         setCompleta(true);
@@ -46,11 +45,4 @@ public class ChecklistItem {
         this.completa = completa;
     }
 
-    public int getOrdem() {
-        return ordem;
-    }
-
-    public void setOrdem(int ordem) {
-        this.ordem = ordem;
-    }
 }

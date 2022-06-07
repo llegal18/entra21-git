@@ -1,4 +1,5 @@
 package classes.tarefa;
+
 import classes.checklist.ChecklistItem;
 
 import java.util.UUID;
@@ -17,8 +18,32 @@ public class Tarefa {
     }
 
     public void completar() {
-        setCompleta(true);
+        this.setCompleta(true);
+        for (ChecklistItem item : this.getChecklist()) {
+            if (item != null) {
+                item.completar();
+            }
+        }
     }
+
+    public boolean temChecklist() {
+        return this.getChecklist() != null;
+    }
+
+    public void criarChecklist(int tamanho) {
+        this.setChecklist(new ChecklistItem[tamanho]);
+    }
+
+    public boolean adicionarChecklistItem(ChecklistItem item) {
+        for (int i = 0; i < this.getChecklist().length; i++) {
+            if (this.getChecklist()[i] == null) {
+                this.getChecklist()[i] = item;
+                return true;
+            }
+        }
+        return false;
+    }
+
     // GETTERS & SETTERS:
 
     public void setUUID(String uuid) {
@@ -59,5 +84,13 @@ public class Tarefa {
 
     public int getOrdem() {
         return this.ordem;
+    }
+
+    public ChecklistItem[] getChecklist() {
+        return checklist;
+    }
+
+    public void setChecklist(ChecklistItem[] checklist) {
+        this.checklist = checklist;
     }
 }
