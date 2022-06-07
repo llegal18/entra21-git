@@ -17,8 +17,8 @@ public class Main {
             Tarefa t = criarTarefa();
             if (!lt.adicionarTarefa(t)) {
                 System.err.println("Impossível adicionar tarefa!");
+                break;
             }
-            lt.adicionarTarefa(criarTarefa());
             System.out.println("Deseja adicionar mais tarefas? (S/N)");
             String add = in.nextLine();
             if (add.equalsIgnoreCase("N")) {
