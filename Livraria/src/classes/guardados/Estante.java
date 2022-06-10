@@ -2,6 +2,8 @@ package classes.guardados;
 
 import classes.itens.Item;
 
+import java.util.Locale;
+
 public class Estante {
 
     private int capMaxima;
@@ -13,27 +15,42 @@ public class Estante {
     }
 
     public boolean estanteCheia() {
-        //TODO
-        return false;
+        return this.quantidadeItens() == this.getCapMaxima();
     }
+
     public int quantidadeItens() {
-        //TODO
-        return 0;
+        int contador = 0;
+        for (Item i : this.getItens()) {
+            if (i != null) {
+                contador++;
+            }
+        }
+        return contador;
     }
 
     public Item buscarItem(String titulo) {
-        //TODO
+        for (Item i : this.getItens()) {
+            if (i != null && i.getTitulo().toLowerCase().contains(titulo.toLowerCase())) {
+                return i;
+            }
+        }
         return null;
     }
 
     public boolean adicionarItem(Item item) {
-        //TODO
+        for (int i = 0; i < getItens().length; i++) {
+            if (this.getItens()[i] == null) {
+                this.getItens()[i] = item;
+                return true;
+            }
+        }
         return false;
     }
 
     public Item removerItem(int posicao) {
-        //TODO
-        return null;
+        Item i = this.getItens()[posicao];
+        this.getItens()[posicao] = null;
+        return i;
     }
 
     // GETTERS & SETTERS:
