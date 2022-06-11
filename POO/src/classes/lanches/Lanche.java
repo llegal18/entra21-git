@@ -14,6 +14,8 @@ public abstract class Lanche {
         }
     }
 
+    public abstract void mostrarDetalhesComanda();
+
     // GETTERS & SETTERS:
 
     public void setValor(double valor) {
