@@ -1,23 +1,21 @@
 package classes.lanches;
 
+import java.util.ArrayList;
+
 public abstract class Sanduiche extends Lanche {
 
-    private String[] adicionais = new String[10];
+    private ArrayList<String> adicionais = new ArrayList<>();
 
     public void adicionarAdicionais(String adicional) {
-        for (int i = 0; i < 10; i++) {
-            if (this.adicionais[i] == null) {
-                this.adicionais[i] = adicional;
-                break;
-            }
-        }
+        this.adicionais.add(adicional);
     }
+
 
     public Sanduiche() {
         this.adicionarIngrediente("Pão");
     }
 
-    public String[] getAdicionais() {
+    public ArrayList<String> getAdicionais() {
         return adicionais;
     }
 }

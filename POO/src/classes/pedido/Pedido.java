@@ -1,10 +1,13 @@
 package classes.pedido;
+
 import classes.lanches.*;
+
 import java.nio.channels.Pipe;
+import java.util.ArrayList;
 
 public class Pedido {
 
-    private Lanche[] lanches = new Lanche[10];
+    private ArrayList<Lanche> lanches = new ArrayList<>();
 
     public void imprimirComanda() {
         for (Lanche l : this.getLanches()) {
@@ -55,27 +58,17 @@ public class Pedido {
     public double calcularValorTotal() {
         double valorTotal = 0;
         for (Lanche l : this.getLanches()) {
-            if (l != null) {
                 valorTotal += l.getValor();
             }
-        }
         return valorTotal;
     }
 
     public void adicionarLanche(Lanche lanche) {
-        for (int i = 0; i < 10; i++) {
-            if (this.lanches[i] == null) {
-                this.lanches[i] = lanche;
-                break;
-            }
-        }
+        this.lanches.add(lanche);
     }
 
-    public void setLanches(Lanche[] lanches) {
-        this.lanches = lanches;
-    }
-
-    public Lanche[] getLanches() {
+    public ArrayList<Lanche> getLanches() {
         return this.lanches;
     }
 }
+
