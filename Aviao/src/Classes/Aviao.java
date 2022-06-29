@@ -16,6 +16,19 @@ public class Aviao implements MeioTransporte {
         this.assentos = assentos;
     }
 
+    public Aviao(int linhasCadeirasLuxo, int linhasCadeirasEconomicas) {
+        for (int i = 0; i < 4 * linhasCadeirasLuxo; i++) {
+            AssentoVoo a = new AssentoVoo();
+            a.setClasse(ClasseAssentoVoo.LUXO);
+            assentos.add(a);
+        }
+        for (int i = 0; i < 6 * linhasCadeirasEconomicas; i++) {
+            AssentoVoo a = new AssentoVoo();
+            a.setClasse(ClasseAssentoVoo.ECONOMICA);
+            assentos.add(a);
+        }
+    }
+
     @Override
     public boolean verificaOcupacao(String assento) {
         for (AssentoVoo a : assentos) {
@@ -52,9 +65,9 @@ public class Aviao implements MeioTransporte {
         return null;
     }
 
-    public Assento getAssento(String assento, String classe) {
+    public Assento getAssento(String assento, ClasseAssentoVoo classe) {
         for (AssentoVoo a : this.assentos) {
-            if (a.getCodigo().equalsIgnoreCase(assento) && a.getClasse().equalsIgnoreCase(classe)) {
+            if (a.getCodigo().equalsIgnoreCase(assento) && a.getClasse().equals(classe)) {
                 return a;
             }
         }
