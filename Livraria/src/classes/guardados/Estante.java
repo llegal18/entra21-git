@@ -2,12 +2,13 @@ package classes.guardados;
 
 import classes.itens.Item;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class Estante {
 
     private int capMaxima;
-    private Item[] itens;
+    private ArrayList<Item> itens = new ArrayList<>();
 
     public Estante(int capMaxima) {
         setCapMaxima(capMaxima);
@@ -19,22 +20,18 @@ public class Estante {
     }
 
     public int quantidadeItens() {
-        int contador = 0;
-        for (Item i : this.getItens()) {
-            if (i != null) {
-                contador++;
-            }
-        }
-        return contador;
+        return this.itens.size();
     }
 
     public Item buscarItem(String titulo) {
         for (Item i : this.getItens()) {
-            if (i != null && i.getTitulo().toLowerCase().contains(titulo.toLowerCase())) {
+            if (i.getTitulo().toLowerCase().contains(titulo.toLowerCase())) {
                 return i;
             }
         }
         return null;
+
+        return this.itens.stream().filter(item -> )
     }
 
     public boolean adicionarItem(Item item) {
@@ -63,11 +60,11 @@ public class Estante {
         this.capMaxima = capMaxima;
     }
 
-    public Item[] getItens() {
+    public ArrayList<Item> getItens() {
         return itens;
     }
 
-    public void setItens(Item[] itens) {
+    public void setItens(ArrayList<Item> itens) {
         this.itens = itens;
     }
 }

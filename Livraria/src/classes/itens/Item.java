@@ -2,6 +2,7 @@ package classes.itens;
 
 import classes.avaliacao.Avaliacao;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public abstract class Item {
@@ -10,7 +11,7 @@ public abstract class Item {
     private String genero;
     private double valor;
 
-    private Avaliacao[] avaliacoes = new Avaliacao[30];
+    private ArrayList<Avaliacao> avaliacoes = new ArrayList<>();
 
     // MÉTODOS:
 
@@ -24,24 +25,12 @@ public abstract class Item {
         in.nextLine();
         System.out.println("Informe algum feedback (opcional): ");
         a.setFeedback(in.nextLine());
-        for (int i = 0; i < getAvaliacoes().length; i++) {
-            if (getAvaliacoes()[i] == null) {
-                getAvaliacoes()[i] = a;
-                break;
-            }
-        }
+        this.avaliacoes.add(a);
     }
 
+
     public double getTotalRating() {
-        double soma = 0;
-        int contador = 0;
-        for (Avaliacao a : getAvaliacoes()) {
-            if (a != null) {
-                soma += a.getRating();
-                contador++;
-            }
-        }
-        return soma / contador;
+        return this.avaliacoes.stream().mapToDouble(Avaliacao::getRating).sum() / this.avaliacoes.size();
     }
 
     // GETTERS & SETTERS:
@@ -70,11 +59,11 @@ public abstract class Item {
         this.valor = valor;
     }
 
-    public Avaliacao[] getAvaliacoes() {
+    public ArrayList<Avaliacao> getAvaliacoes() {
         return avaliacoes;
     }
 
-    public void setAvaliacoes(Avaliacao[] avaliacoes) {
+    public void setAvaliacoes(ArrayList<Avaliacao> avaliacoes) {
         this.avaliacoes = avaliacoes;
     }
 }
