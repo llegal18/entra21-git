@@ -1,13 +1,13 @@
 package classes.itens;
 
+import java.util.Scanner;
+
 public class Livro extends Item {
 
     private String autor;
     private int qtdePaginas;
     private int anoPublicacao;
     private int edicao;
-
-    // GETTERS & SETTERS:
 
     public String getAutor() {
         return autor;
@@ -39,5 +39,26 @@ public class Livro extends Item {
 
     public void setEdicao(int edicao) {
         this.edicao = edicao;
+    }
+
+    @Override
+    public void montarDetalhes(Scanner in) {
+        System.out.println("Informe o autor: ");
+        this.setAutor(in.nextLine());
+        System.out.println("Informe a quantidade de páginas: ");
+        this.setQtdePaginas(in.nextInt());
+        System.out.println("Informe o ano de publicção: ");
+        this.setAnoPublicacao(in.nextInt());
+        System.out.println("Informe a edição: ");
+        this.setEdicao(in.nextInt());
+        in.nextLine();
+    }
+
+    @Override
+    public void mostrarDetalhes() {
+        System.out.println("Autor: " + this.getAutor());
+        System.out.println("Quantidade de páginas: " + this.getQtdePaginas());
+        System.out.println("Ano de publicação: " + this.getAnoPublicacao());
+        System.out.println("Edição: " + this.getEdicao());
     }
 }

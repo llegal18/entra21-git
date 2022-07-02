@@ -12,7 +12,6 @@ public class Estante {
 
     public Estante(int capMaxima) {
         setCapMaxima(capMaxima);
-        setItens(new Item[capMaxima]);
     }
 
     public boolean estanteCheia() {
@@ -24,30 +23,18 @@ public class Estante {
     }
 
     public Item buscarItem(String titulo) {
-        for (Item i : this.getItens()) {
-            if (i.getTitulo().toLowerCase().contains(titulo.toLowerCase())) {
-                return i;
-            }
-        }
-        return null;
-
-        return this.itens.stream().filter(item -> )
+        return this.itens.stream().filter(item -> item.getTitulo().equalsIgnoreCase(titulo)).findFirst().orElse(null);
     }
 
     public boolean adicionarItem(Item item) {
-        for (int i = 0; i < getItens().length; i++) {
-            if (this.getItens()[i] == null) {
-                this.getItens()[i] = item;
-                return true;
-            }
+        if (!estanteCheia()) {
+            return this.itens.add(item);
         }
         return false;
     }
 
     public Item removerItem(int posicao) {
-        Item i = this.getItens()[posicao];
-        this.getItens()[posicao] = null;
-        return i;
+        return this.itens.remove(posicao);
     }
 
     // GETTERS & SETTERS:
