@@ -21,12 +21,13 @@ body{
 table {
     border: 1px solid black;
     width: 100%;
+    border-spacing: 0;
 }
 
 th {
     text-align: start;
-    background-color: #8c8c8c;
-    padding: 0;
+    background-color: #b3b3b3;
+    padding: 8px 4px;
 }
 
 * {
