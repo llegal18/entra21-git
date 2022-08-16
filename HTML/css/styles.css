@@ -150,6 +150,50 @@ div.forms {
     border-radius: 1px solid black;
 }
 
+.btn {
+    border: 0;
+    background-color: transparent;
+    padding: 4px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn.btn-success {
+    background-color: #f85555;
+}
+
+.btn.btn-success:hover {
+    background-color: #ff6c6c;
+}
+
+.btn.btn-success:active {
+    background-color: #e63f3f;
+}
+
+.btn.btn-warning {
+    background-color: rgb(228, 209, 62);
+}
+
+.btn.btn-warning:hover {
+    background-color: rgb(247, 227, 77);
+}
+
+.btn.btn-warning:active {
+    background-color: rgb(179, 163, 43);
+}
+
+.btn.btn-danger {
+    background-color: rgb(228, 62, 62);
+}
+
+.btn.btn-danger:hover {
+    background-color: rgb(247, 77, 77);
+}
+
+.btn.btn-danger:active {
+    background-color: rgb(179, 43, 43);
+}
+
 * {
     font-family: 'Poppins';
 }
