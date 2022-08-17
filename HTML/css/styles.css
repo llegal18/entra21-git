@@ -30,6 +30,10 @@ html, body{
     text-align: center;
 }
 
+.edit-cell button {
+    display: inline-block;
+}
+
 .edit-cell a {
     text-decoration: none;
     background-color: #e47676;
@@ -159,39 +163,39 @@ div.forms {
 }
 
 .btn.btn-success {
-    background-color: #f85555;
+    background-color: #ff59a4;
 }
 
 .btn.btn-success:hover {
-    background-color: #ff6c6c;
+    background-color: #ff77b4;
 }
 
 .btn.btn-success:active {
-    background-color: #e63f3f;
+    background-color: #d84587;
 }
 
 .btn.btn-warning {
-    background-color: rgb(228, 209, 62);
+    background-color: #ff4500
 }
 
 .btn.btn-warning:hover {
-    background-color: rgb(247, 227, 77);
+    background-color: #fc6f3b;
 }
 
 .btn.btn-warning:active {
-    background-color: rgb(179, 163, 43);
+    background-color: #c04315;
 }
 
 .btn.btn-danger {
-    background-color: rgb(228, 62, 62);
+    background-color: #ff0000;
 }
 
 .btn.btn-danger:hover {
-    background-color: rgb(247, 77, 77);
+    background-color: #ff4451;
 }
 
 .btn.btn-danger:active {
-    background-color: rgb(179, 43, 43);
+    background-color: #c71717;
 }
 
 * {
