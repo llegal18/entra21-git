@@ -109,12 +109,12 @@ ul.navlist li a {
     border-radius: 4px;
 }
 
-ul {
+/* ul {
     padding: 0;
     width: 15%;
     margin: auto;
     margin-top: 46px;
-}
+} */
 
 ul.navlist li a:hover {
     background-color: #c45858;
