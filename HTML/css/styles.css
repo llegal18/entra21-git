@@ -92,7 +92,7 @@ small {
     font-size: 3em;
     background-color: #b84648;
     padding: 12px;
-    margin: 2px 0;
+    margin: 2px 0; 
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 4px;
@@ -109,12 +109,12 @@ ul.navlist li a {
     border-radius: 4px;
 }
 
-/* ul {
+ul {
     padding: 0;
     width: 15%;
     margin: auto;
     margin-top: 46px;
-} */
+}
 
 ul.navlist li a:hover {
     background-color: #c45858;
@@ -198,6 +198,28 @@ div.forms {
     background-color: #c71717;
 }
 
+.edit-api {
+    display: inline-block;
+    border: 0;
+    background-color: transparent;
+    padding: 4px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 20px;
+    background-color: #d86163;
+}
+
+#gatinhosfofos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#img-gato {
+    
+}
+
 * {
     font-family: 'Poppins';
 }
@@ -215,4 +237,9 @@ div.forms {
     }
 }
 
-
+#gatinhosfofos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

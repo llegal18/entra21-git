@@ -21,7 +21,7 @@
     <img src />
     <button onclick="loadImg()">Get DOG</button>
 </body>
-</html> -->
+</html>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -46,5 +46,59 @@
 </head>
 <body onload="loadCharList()">
     <ul id="charlist"></ul>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript">
+        function requestImg(text) {
+            let url = text == null ?
+                "https://cataas.com/cat?json=true" :
+                `https://cataas.com/cat/says/${text}?json=true`;
+            let req = new XMLHttpRequest();
+            req.open("GET", url, true);
+            req.onload = () => {
+                let img = document.getElementsByTagName("img")[0]
+                img.src = "https://cataas.com" + 
+                    JSON.parse(req.responseText).url;
+                img.onload = () => document.getElementsByTagName("button")[0].disabled = false;
+            }
+            document.getElementsByTagName("button")[0].disabled = true;
+            req.send(null);
+
+            // let req = new XMLHttpRequest();
+            // req.open("GET", "https://cataas.com/cat?json=true");
+            // req.send(null);
+            // document.getElementsByTagName("img")[0].src = "https://cataas.com" +
+            //     JSON.parse(req.responseText).url;
+        }
+
+        function loadImg() {
+            requestImg();
+        }
+
+        function loadImgWithText() {
+            let texto = prompt("Digite o texto a ser inserido na imagem");
+            if (texto != null) {
+                requestImg(texto);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 class="edit-titulo">Gatinhos</h1>
+    <div id="gatinhosfofos">
+        <img src />
+        <button class="edit-api" onclick="loadImg()">Get CAT</button>
+        <button class="edit-api" onclick="loadImgWithText()">Get CAT with text</button>
+    </div>
 </body>
 </html>
