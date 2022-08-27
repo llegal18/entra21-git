@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volta ao Mundo</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="css/styles.css">
+    <script id="" text="text/javascript">
+        function startGame() {
+            let regras = alert(`Bem vindo ao Jogo do Volta ao Mundo!
+                \nComo o jogo funciona:\nVocê deve falar o nome de algum país ou cidade e como você chegará lá, e o jogo vai te falar se você conseguiu ou não chegar.
+                \nAtenção: Existe uma charada por trás e cabe a você descobrir!\nBom jogo!
+            `);
+        }
+    </script>
+</head>
+<body>
+    <h1 class="edit-titulo">Jogo Volta ao Mundo</h1>
+    <div class="voltaaomundo">
+        <img width="25%" src="design/volta.svg" alt="">
+        <button class="voltaaomundo edit-game" onclick="startGame()">Iniciar Jogo</button>
+        <h4 style="color: #b84648;">Para onde você vai?</h4>
+    </div>
+    <div id="input" class="voltaaomundo">
+        <input id="answer" type="text" name="" id="local">
+        <input style="margin: 0;" class="edit-game" type="submit" name="" id="">
+    </div>
+</body>
+</html>

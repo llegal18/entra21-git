@@ -243,3 +243,45 @@ div.forms {
     align-items: center;
     flex-direction: column;
 }
+
+.voltaaomundo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#input{
+    flex-direction: row;
+}
+
+#answer {
+    margin: 5px;
+    border: none;
+    border-bottom: 1px solid #a73e40;
+    background-color: transparent;
+}
+
+.edit-game {
+    display: inline-block;
+    border: 0;
+    background-color: transparent;
+    padding: 4px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 20px;
+    background-color: #d86163;
+    color: white;
+}
+
+.btn.btn-success {
+    background-color: #d86163;
+}
+
+.btn.btn-success:hover {
+    background-color: #f07b7d;
+}
+
+.btn.btn-success:active {
+    background-color: #c45455;
+}
