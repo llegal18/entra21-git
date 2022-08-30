@@ -14,18 +14,86 @@
                 \nAtenção: Existe uma charada por trás e cabe a você descobrir!\nBom jogo!
             `);
         }
+
+        let v = ["Venezuela","Vaticano"];
+        let o = ["Omã"];
+        let l = ["Londres"];
+        let t = ["Turquia"];
+        let a = ["Alemanha"];
+        let posicoes = ['v', 'o', 'l','t', 'a'];
+        let acertos = 0;
+        let erros = 0;
+
+        function load(){
+            let msg = document.getElementById("answer").value;
+            document.getElementById("answer").value = "";
+            console.log(msg);
+            if(msg == ""){
+                let avisoBody = document.getElementById("aviso");
+                avisoBody.innerHTML = `Digite algum lugar`;
+                
+            }
+            else if(msg.charAt(0).toLowerCase() == posicoes[acertos]){
+                let avisoBody = document.getElementById("aviso");
+                avisoBody.innerHTML = `Você pode viajar para ${msg}!`;
+
+                if(!getLista().includes(msg)){
+                    getLista().push(msg);
+                    console.log(getLista());
+                }
+                acertos++;
+
+            }else{
+                let avisoBody = document.getElementById("aviso");
+                avisoBody.innerHTML = `Você não pode viajar para ${msg}!`;
+                
+                erros++;
+
+                if(erros == 3){
+                    let avisoBody = document.getElementById("aviso");
+                    avisoBody.innerHTML = "Dica: Você pode ir para "  + getLista()[0];
+                    erros = 0;
+                }
+            }
+
+            if(acertos == 5){
+                acertos = 0;
+            }
+        }
+
+        function getLista(){
+            switch(acertos){
+                case 0:
+                    return v;
+                    
+                case 1:
+                    return o;
+                    
+                case 2:
+                    return l;
+                    
+                case 3:
+                    return t;
+                    
+                case 4:
+                    return a;
+                    
+            }
+        }
+
     </script>
 </head>
 <body>
     <h1 class="edit-titulo">Jogo Volta ao Mundo</h1>
     <div class="voltaaomundo">
-        <img width="25%" src="design/volta.svg" alt="">
+        <img width="22%" src="design/volta.svg" alt="">
         <button class="voltaaomundo edit-game" onclick="startGame()">Iniciar Jogo</button>
         <h4 style="color: #b84648;">Para onde você vai?</h4>
     </div>
     <div id="input" class="voltaaomundo">
-        <input id="answer" type="text" name="" id="local">
-        <input style="margin: 0;" class="edit-game" type="submit" name="" id="">
+        <input id="answer" type="text" name="resposta" placeholder="Digite um lugar...">
+        <button style="margin: 0;" class="edit-game" onclick="load()">Enviar</button>
     </div>
+    <div class="edit-aviso" id="aviso"></div>
 </body>
 </html>

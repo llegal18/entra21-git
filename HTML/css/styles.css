@@ -198,28 +198,6 @@ div.forms {
     background-color: #c71717;
 }
 
-.edit-api {
-    display: inline-block;
-    border: 0;
-    background-color: transparent;
-    padding: 4px 16px;
-    cursor: pointer;
-    border-radius: 8px;
-    margin: 20px;
-    background-color: #d86163;
-}
-
-#gatinhosfofos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#img-gato {
-    
-}
-
 * {
     font-family: 'Poppins';
 }
@@ -235,13 +213,6 @@ div.forms {
     ul.navlist li a {
         display: block;
     }
-}
-
-#gatinhosfofos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .voltaaomundo {
@@ -272,6 +243,13 @@ div.forms {
     margin: 20px;
     background-color: #d86163;
     color: white;
+}
+
+.edit-aviso {
+    color: #b84648;
+    text-align: center;
+    display: block;
+    margin: 15px;
 }
 
 .btn.btn-success {

@@ -1,0 +1,39 @@
+html, body {
+    background-color: #fdc0be;
+    text-align: center;
+    display: block;
+}
+
+.edit-titulo {
+    text-align: center;
+    font-size: 3em;
+    background-color: #b84648;
+    padding: 12px;
+    margin: 2px 0; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    color: #f1f1f1;
+}
+
+.edit-api {
+    border: 0;
+    background-color: transparent;
+    padding: 4px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 5px;
+    background-color: #d86163;
+}
+
+#gatinhosfofos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: inline-block;
+}
+
+* {
+    font-family: 'Poppins';
+}
