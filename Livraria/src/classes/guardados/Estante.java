@@ -1,12 +1,11 @@
 package classes.guardados;
 
 import classes.itens.Item;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class Estante {
-
     private int capMaxima;
     private ArrayList<Item> itens = new ArrayList<>();
 
@@ -22,9 +21,11 @@ public class Estante {
         return this.itens.size();
     }
 
-    public Item buscarItem(String titulo) {
-        return this.itens.stream().filter(item -> item.getTitulo().equalsIgnoreCase(titulo)).findFirst().orElse(null);
+    public @Nullable Item buscarItem(String titulo) {
+        return this.itens.stream().filter(i -> i.getTitulo().equalsIgnoreCase(titulo))
+                .findFirst().orElse(null);
     }
+
 
     public boolean adicionarItem(Item item) {
         if (!estanteCheia()) {
@@ -37,7 +38,7 @@ public class Estante {
         return this.itens.remove(posicao);
     }
 
-    // GETTERS & SETTERS:
+    // GETTERS & SETTERS
 
     public int getCapMaxima() {
         return capMaxima;
