@@ -1,22 +1,21 @@
 package com.entra21.primeiroprojetospring.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.entra21.primeiroprojetospring.model.dto.ItemDetalhesDTO;
 import lombok.Data;
-import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Set;
 
+@Data
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "item")
-@Data
 public abstract class ItemEntity {
 
     @Column(name = "id")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long itemId;
+    private Long id;
 
     @Column(name = "titulo")
     private String titulo;
@@ -44,4 +43,8 @@ public abstract class ItemEntity {
             inverseJoinColumns = @JoinColumn(name = "id_genero")
     )
     private Set<GeneroEntity> generos;
+
+    public abstract ETipoItem getType();
+
+    public abstract ItemDetalhesDTO toDTO();
 }
