@@ -1,0 +1,8 @@
+<div (click)="showID()">
+    <span *ngIf="!hero.alive">✝</span>
+    <h3 style="display: inline; margin-right: 2px;" [ngStyle]="{'color': (hero.alive === true) ? 'black' : 'grey',
+        'font-style': (hero.alive === true) ? 'normal' : 'italic'}">
+            {{ hero.heroName }}
+    </h3>
+    <small [ngStyle]="{'color': (hero.universe === 'DC') ? 'blue' : 'red'}">({{ hero.universe }})</small>
+</div>
